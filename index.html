@@ -40,14 +40,27 @@
         </div>
         <div class="content__app" id="content__app">
             <div class="conteiner__form" id="conteiner__form">
-                <form action="" class="form">
+                <form action="" class="form" id="form">
                     <div class="form__element">
                         <label for="card__name" class="form__label">CARDHOLDER NAME</label>
-                        <input type="text" name="card__name" id="card__name" class="form__input" placeholder="e.g. Jane Appleseed">    
+                        <input type="text" name="card__name" id="card__name" class="form__input" placeholder="e.g. Jane Appleseed">
+                        <div class="form__message name">
+                            Can't be blanck
+                        </div>
+                        <div class="form__message--error">
+                            Wrong format, letters only
+                        </div>
                     </div>
                     <div class="form__element">
                         <label for="card__number" class="form__label">CARD NUMBER</label>
-                        <input type="text" name="card__number" id="card__number" class="form__input" placeholder="e.g. 1234 5678 9123 0000" maxlength="19">
+                        <input type="text" name="card__number" id="card__number" class="form__input" placeholder="e.g. 1234 5678 9123 0000"
+                        maxlength="19">
+                        <div class="form__message number">
+                            Can't be blanck
+                        </div>
+                        <div class="form__message--error">
+                            Please fill in the field, 16 numbers
+                        </div>
                     </div>
                     <div class="form__characteristics">
                         <div class="form__element">
@@ -56,13 +69,31 @@
                                 <input type="text" name="card__exp--month" id="card__exp--month" class="form__input form__input--exp" placeholder="MM" maxlength="2">
                                 <input type="text" name="card__exp--year" id="card__exp--year" class="form__input form__input--exp" placeholder="YY" maxlength="2">
                             </div>
+                            <div class="form__message">
+                                Can't be blanck
+                            </div>
+                            <div class="form__message--error">
+                                Please fill in the field, 2 numbers
+                            </div>
+                            <div class="form__message">
+                                Can't be blanck
+                            </div>
+                            <div class="form__message--error">
+                                Please fill in the field, 2 numbers
+                            </div>
                         </div>
                         <div class="form__element">
                             <label for="card__cvc" class="form__label">CVC</label>
-                            <input type="text" name="card__cvc" id="card__cvc" class="form__input" placeholder="e.g. 123" maxlength="3">    
-                        </div>    
+                            <input type="text" name="card__cvc" id="card__cvc" class="form__input" placeholder="e.g. 123" maxlength="3">
+                            <div class="form__message">
+                                Can't be blanck
+                            </div>
+                            <div class="form__message--error">
+                                Please fill in the field, 3 numbers
+                            </div>
+                        </div>   
                     </div>
-                    <button type="button" class="form__input form__button" onclick="confirm()">Confirm</button>
+                    <button class="form__input form__button">Confirm</button>
                 </form>    
             </div>    
         </div>
