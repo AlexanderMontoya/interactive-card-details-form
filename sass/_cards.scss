@@ -1,0 +1,209 @@
+.conteiner__cards{
+    width: 100%;
+    height: 200px;
+    background-image: url(../images/bg-main-mobile.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 50px;
+    .card{
+        width: 310px;
+        height: 200px;
+        margin: auto;
+        position: relative;
+        font-family: var(--font-family);
+        color: var(--color-white);
+        &__back{
+            width: 75%;
+            position: absolute;
+            top: 0;
+            right: 0;
+            animation: anim_Cards 1s;
+            img{
+                width: 100%;
+                height: 100%;
+            }
+            .card__text{
+                font-size: 12px;
+                position: absolute;
+                top: 55px;
+                right: 30px;
+                @media only screen and (max-width:375px){
+                    top: 52px;
+                }
+            }
+        }
+        &__front{
+            width: 75%;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            animation: anim_Cards 1s;
+            img{
+                width: 100%;
+                height: 100%;
+            }
+            .card__text{
+                font-size: 12px;
+                position: absolute;
+                top: 15px;
+                left: 15px;
+                right: 15px;
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                .circles{
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    .circle1{
+                        width: 30px;
+                        height: 30px;
+                        border-radius: 50%;
+                        background-color: white;
+                    }
+                    .circle2{
+                        width: 15px;
+                        height: 15px;
+                        border-radius: 50%;
+                        border: 1px solid var(--color-white);
+                    }
+                }
+                .number{
+                    margin: 0px;
+                    margin-top: 30px;
+                    margin-bottom: 10px;
+                    font-size: 14px;
+                    letter-spacing: 2px;
+                }
+                .name{
+                    font-size: 10px;
+                    letter-spacing: 2px;
+                }
+                .date__exp{
+                    font-size: 10px;
+                    letter-spacing: 2px;
+                }
+                @media only screen and (max-width:375px) {
+                    &{
+                        top: 10px;
+                        left: 10px;
+                        right: 10px;
+                    }
+                }
+            }
+        }
+        @media only screen and (max-width:375px){
+            &{
+                width: 290px;
+            }
+        }
+    }
+    @media only screen and (min-width:769px){
+        &{
+            width: 600px;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            background-image: url(../images/bg-main-desktop.png);
+            .card{
+                width: 400px;
+                height: 350px;
+                margin-left: 20px;
+                position: fixed;
+                &__back{
+                    top: auto;
+                    bottom: 0;
+                    right: 0;
+                    .card__text{
+                        font-size: 14px;
+                        position: absolute;
+                        top: 75px;
+                        right: 30px;
+                    }
+                }
+                &__front{
+                    top: 0;
+                    bottom: auto;
+                    left: 0;
+                    .card__text{
+                        font-size: 14px;
+                        top: 20px;
+                        right: 20px;
+                        .circles{
+                            gap: 15px;
+                            .circle1{
+                                width: 40px;
+                                height: 40px;
+                                border-radius: 50%;
+                                background-color: white;
+                            }
+                            .circle2{
+                                width: 20px;
+                                height: 20px;
+                                border-radius: 50%;
+                                border: 1px solid var(--color-white);
+                            }
+                        }
+                        .number{
+                            width: 100%;
+                            font-size: 18px;
+                            margin: 0px;
+                            margin-top: 35px;
+                            margin-bottom: 10px;
+                        }
+                        .name{
+                            font-size: 11px;
+                        }
+                        .date__exp{
+                            font-size: 11px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @media only screen and (min-width:1200px){
+        &{
+            .card{
+                width: 500px;
+                height: 450px;
+                margin-left: 150px;
+                &__back{
+                    top: auto;
+                    bottom: 0;
+                    right: 0;
+                    .card__text{
+                        font-size: 16px;
+                        top: 95px;
+                        right: 40px;
+                    }
+                }
+                &__front{
+                    top: 0;
+                    bottom: auto;
+                    left: 0;
+                    .card__text{
+                        font-size: 16px;
+                        position: absolute;
+                        top: 25px;
+                        left: 25px;
+                        right: 25px;
+                        .number{
+                            font-size: 25px;
+                            margin: 0px;
+                            margin-top: 50px;
+                            margin-bottom: 20px;
+                        }
+                        .name{
+                            font-size: 13px;
+                        }
+                        .date__exp{
+                            font-size: 13px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
